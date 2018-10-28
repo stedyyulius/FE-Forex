@@ -15,9 +15,7 @@ describe('<CurrencyDropdown />', () => {
 
   it('There should be dropdown select currency function', () => {
     const component = mount(<CurrencyDropdown store={store} />);
-    component
-      .find('select.select-currency')
-      .simulate('click');
+    component.find('select.select-currency').simulate('click');
     expect(component).toMatchSnapshot();
     component.unmount();
   });
@@ -41,5 +39,4 @@ describe('<CurrencyDropdown />', () => {
    const component = shallow(<CurrencyDropdown store={store} />);
    expect(component.render().find('.select-currency').find('.eur').text()).toEqual('EUR');
   });
-
 });

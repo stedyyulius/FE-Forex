@@ -18,19 +18,18 @@ describe('<MoneyTable />', () => {
    expect(component.find('table')).toHaveLength(1);
   });
 
-  it('should have 3 headers', () => {
+  it('should have 2 columns', () => {
    const component = shallow(<MoneyTable store={store} />);
    expect(component.render().find('table').find('thead').find('tr').find('th')).toHaveLength(2);
   });
 
-  it('should have Base header', () => {
+  it('should have Base column', () => {
    const component = shallow(<MoneyTable store={store} />);
    expect(component.render().find('table').find('thead').find('tr').find('.base').text()).toEqual('Base');
   });
 
-  it('should have Jumlah header', () => {
+  it('should have Jumlah column', () => {
    const component = shallow(<MoneyTable store={store} />);
    expect(component.render().find('table').find('thead').find('tr').find('.jumlah').text()).toEqual('Jumlah');
   });
-
 });

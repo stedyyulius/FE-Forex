@@ -18,24 +18,23 @@ describe('<CurrencyTable />', () => {
    expect(component.find('table')).toHaveLength(1);
   });
 
-  it('should have 3 headers', () => {
+  it('should have 3 columns', () => {
    const component = shallow(<CurrencyTable store={store} />);
    expect(component.render().find('table').find('thead').find('tr').find('th')).toHaveLength(3);
   });
 
-  it('should have Mata Uang header', () => {
+  it('should have Mata Uang column', () => {
    const component = shallow(<CurrencyTable store={store} />);
    expect(component.render().find('table').find('thead').find('tr').find('.mata-uang').text()).toEqual('Mata Uang');
   });
 
-  it('should have Kurs header', () => {
+  it('should have Kurs column', () => {
    const component = shallow(<CurrencyTable store={store} />);
    expect(component.render().find('table').find('thead').find('tr').find('.kurs').text()).toEqual('Kurs');
   });
 
-  it('should have Calculated header', () => {
+  it('should have Calculated column', () => {
    const component = shallow(<CurrencyTable store={store} />);
    expect(component.render().find('table').find('thead').find('tr').find('.calculated').text()).toEqual('Calculated');
   });
-
 });

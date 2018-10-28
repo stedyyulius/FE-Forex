@@ -21,13 +21,6 @@ export const getRates = (currency) => {
   }
 }
 
-export const changeCurrency = (currency) => {
-  return {
-    type: 'currency',
-    payload: currency,
-  }
-}
-
 export const changeCurrencyAmount = (amount) => {
   return {
     type: 'currencyAmount',
